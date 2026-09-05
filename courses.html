@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Example</title>
+  <link rel="stylesheet" href="main.css/style.css" />
+  <style>
+    .table_Course {
+      padding: 10px 90px;
+    }
+
+    .table_Course table {
+      border-collapse: collapse;
+      width: 75%;
+      margin: 20px auto;
+    }
+
+    .table_Course h1 {
+      font-family: "Khmer OS Muol Light", sans-serif;
+      text-align: center;
+      color: #0b3d6b;
+    }
+
+    .table_Course td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .table_Course th {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    .table_Course p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .table_Course h3 {
+      color: #e9e8e7;
+      font-size: 1.3rem;
+      margin: 20px 0;
+    }
+
+
+    /* ── ANNOUNCEMENTS ── */
+    .section {
+      padding: 20px 200px;
+    }
+
+    .section-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e4e9f0;
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-stripe {
+      height: 4px;
+    }
+
+    .card-stripe.blue {
+      background: rgb(0, 0, 156);
+    }
+
+    .card-stripe.gold {
+      background: rgb(172, 146, 1);
+    }
+
+    .card-stripe.green {
+      background: #2e8b57;
+    }
+
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .card-date {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-family: "Khmer OS Muol Light", sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .card-text {
+      text-align: justify;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="images/school-logo.png" alt="">
+      <div class="school-title">
+        <h3>មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលវិជ្ជាជីវៈ ខេត្តរតនគិរី</h3>
+        <h4>Ratanakiri Provincial Training Center</h4>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span>
+    </button>
+    <nav id="nav">
+      <a href="index.html">ទំព័រដើម</a>
+      <a href="courses.html" class="active">វគ្គសិក្សា</a>
+      <a href="about.html">អំពី</a>
+      <a href="structure.html">រចនាសម្ព័ន្ធ</a>
+      <a href="activity.html">សកម្មភាព</a>
+      <a href="contact.html">ទំនាក់ទំនង</a>
+    </nav>
+  </header>
+  <!-- Marquee Ticker -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="track">
+      <span class="marquee-item"><span class="dot"></span><strong>សាលាបច្ចេកទេស:</strong>មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលវិជ្ជាជីវៈ
+        ខេត្តរតនគិរី</span><span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>ការដំឡើងបណ្តាញអគ្គិសនីក្នុងអគារ</span>
+      <span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>ការថែទាំ និងជួសជុលទោចក្រយានយន្ត</span>
+      <span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>ការរចនាក្រាហ្វិកដោយកុំព្យូទ័រ</span>
+      <span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>សេវាកម្មកុំព្យូទ័រ</span>
+      <span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>សេវាកម្មកាត់សក់បុរស</span>
+      <span class="marquee-divider"></span>
+      <span class="marquee-item"><span class="dot"></span><strong>ជំនាញ:</strong>សេវាកម្មសម្អាងកាយ</span>
+      <span class="marquee-divider"></span>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ====================================================================================================== -->
+  <!-- ANNOUNCEMENTS -->
+  <div class="section">
+    <div class="cards">
+      <div class="card">
+        <div class="card-stripe blue"></div>
+        <a href="#6_PTCRTK" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <div class="card-date">01/06/2026</div>
+            <div class="card-title">សញ្ញាបត្របច្ចេកទេស និងវិជ្ជាជីវៈ១(C1) សិក្សារយៈពេល៤ខែ</div>
+            <div class="card-text">
+              មជ្ឈមណ្ឌល និងផ្តល់អាហារូបករណ៍សិក្សាដោយឥតបង់ថ្លៃ ដល់ដល់ពលករ ពលការនី ឱ្យចូលរៀនជំនាញបច្ចេកទេស
+              និងវិជ្ជាជីវៈចំនួន៩៨០កន្លែង ដូចខាងក្រោម៖
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-stripe gold"></div>
+        <a href="#6_PTCRTK_PMLU_PR01_FR06" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <div class="card-date">01/06/2026</div>
+            <div class="card-title">មុខជំនាញសិក្សារយៈ១ខែ មុខជំនាញសិក្សារយៈ១សប្ដាហ៍</div>
+            <div class="card-text">
+              មជ្ឈមណ្ឌល និងរៀបចំបើកវគ្គបណ្ដុះបណ្ដាលមុខជំនាញបច្ចេកទេស និងវិជ្ជាជីវៈ ដែល
+              ទីផ្សារការងារកំពុងមានតម្រូវការខ្ពស់
+              ឥតបង់ថ្លៃសិក្សា
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-stripe green"></div>
+        <a href="#6_PTCRTK2" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <div class="card-date">01/06/2026</div>
+            <div class="card-title">ថ្នាក់សញ្ញាបត្រជាន់ខ្ពស់បច្ចេកទេស សិក្សារយៈពេល២ឆ្នាំ</div>
+            <div class="card-text">
+              ជំនាញសិក្សា បច្ចេកវិទ្យាព័ត៌មានវិទ្យា វិស្វកម្មអគ្គិសនី វិស្វកម្មសំណង់ស៊ីវិល
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- ====================================================================================================== -->
+<div class="image-course" style="display: grid; justify-content: center; align-items: center; padding: 20px 10px;" id="6_PTCRTK_PMLU_PR01_FR06">
+  <div style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);">
+    <img src="images/6_PTCRTK_PMLU_PR01_FR06.jpg" alt="" style="width: 1080px;">
+  </div>
+  <div style=" box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);margin-top: 10px;" id="6_PTCRTK">
+    <img src="images/6_PTCRTK.jpg" alt="" style="width: 1080px;">
+  </div>
+  <div style=" box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);margin-top: 10px;" id="6_PTCRTK2">
+    <img src="images/6_PTCRTK.jpg" alt="" style="width: 1080px;">
+  </div>
+</div>
+  <!-- <div class="table_Course">
+    <h1>សេចក្ដីជូនដំណើរ</h1>
+    <div class="P">
+      <p><span></span>មជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តរតនគិរី ជាគ្រឹះស្ថានរដ្ឋដែលស្ថិតនៅក្រោមក្រសួងការងារ
+        និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ មានកិត្តិយសសូមជម្រាបជូនដំណឹងដល់សាធារណជនទាំងអស់ឱ្យបានជ្រាបថា
+        សម្រាប់ឆ្នាំសិក្សាថ្មី ២០២៥-២០២៦ នេះ
+        <span style="color: #131413; font-weight: bold;">មជ្ឈមណ្ឌល នឹងផ្តល់អាហារូបករណ៍សិក្សាដោយឥតបង់ថ្លៃ</span>
+        ដល់សិក្ខាកាម សិស្ស និងយុវជន-យុវនារី ឱ្យចូលរៀនជំនាញបច្ចេកទេស
+        និងវិជ្ជាជីវៈ ចំនួន ៧៣០ កន្លែង តាមមុខជំនាញដូចខាងក្រោម៖
+      </p>
+    </div>
+    <div class="table_Course_table">
+      <table>
+        <tr>
+          <th>ល.រ</th>
+          <th>កម្រិតសិក្សា</th>
+          <th>វគ្គសបណ្ដុះបណ្ដាល(ជំនាញ)</th>
+          <th>ចំនួន</th>
+          <th>លក្ខខណ្ឌចុះឈ្មោះ</th>
+        </tr>
+
+        <tr>
+          <td rowspan="12">១</td>
+          <td rowspan="12">សញ្ញាបត្រ <br>បច្ចេកទេស <br>និងវិជ្ជាជីវៈ១ <br> (C1-1.5M) </td>
+          <td>១. ការងារកំបោរ (ជាងសំណង់) </td>
+          <td>20 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>២. ដំឡើងបណ្តាញបំពង់ទឹក </td>
+          <td>30 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៣. ដំឡើងបណ្តាញអគ្គិសនីក្នុងអគារ </td>
+          <td>50 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៤. រចនាក្រាហ្វិកដោយកុំព្យូទ័រ </td>
+          <td>30 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td> ៥. សេវាកម្មកុំព្យូទ័រ </td>
+          <td>30 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៦. សេវាកម្មសំអាងកាយ</td>
+          <td>60 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៧. សេវាកម្មកាត់សក់បុរស </td>
+          <td>60 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៨. ថែទាំ និងជួសជុលទោចក្រយានយន្ត (ម៉ូតូ) </td>
+          <td>60 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>៩.ធុរកិច្ចភេសជ្ជៈ </td>
+          <td>30 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>១០. ការដាំ និងថែទាំដំណាំកៅស៊ូ </td>
+          <td>50 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>១១. ការដាំ ការថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </td>
+          <td>160 នាក់</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>១២. ការចិញ្ចឹម និងថែទាំត្រីប្រា</td>
+          <td>160 នាក់</td>
+          <td></td>
+        </tr>
+
+      </table>
+      <p>បញ្ជាក់៖ យុវជន យុវនារី ដែលមកពីគ្រួសារក្រីក្រ និងងាយរងហានិភ័យ
+        មានឱកាសទទួលបានប្រាក់ឧបត្ថម្ភបន្ថែមក្នុងអំឡុងពេលសិក្សា<span style="color: #131413; font-weight: bold;">
+          ២៨០,០០០រៀល (ម្ភៃប្រាំបីម៉ឺនរៀល)/ខែ</span> (ការផ្តល់ជូននេះសម្រាប់តែកម្មវិធីបណ្តុះបណ្តាលជំនាញបច្ចេកទេស
+        និងវិជ្ជាជីវៈសម្រាប់យុវជន យុវនារី ដែលមកពីគ្រួសារក្រីក្រ និងងាយរងហានិភ័យ (1.5M) តែប៉ុណ្ណោះ)។
+        * ស្រ្តី ជនពិការ ជនភៀសខ្លួន ជនជាតិដើមភាគតិច ត្រូវបានផ្តល់អាទិភាពក្នុងការចុះឈ្មោះចូលរៀន។
+        តើអ្នកចង់ឱ្យខ្ញុំជួយរៀបចំឯកសារចុះឈ្មោះ ឬចង់ដឹងព័ត៌មានលម្អិតអំពីជំនាញណាមួយក្នុងចំណោមនេះដែរឬទេ?</p>
+    </div>
+  </div> -->
+
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-grid">
+      <!-- Column 1: Contact -->
+      <div class="footer-col">
+        <h3>ទំនាក់ទំនង</h3>
+
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+          </svg>
+          <p>097 470 6184<br />012 614 145<br /></p>
+        </div>
+
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+          <p>info@mlvt.gov.kh</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Address -->
+      <div class="footer-col">
+        <h3>អាសយដ្ឋាន</h3>
+        <div class="address-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <p>
+            ភូមិទេសអន្លុង សង្កាត់បឹងកន្សែង ក្រុងបានលុង ខេត្តរតនគិរី(ក្រោយមន្ទីអប់រំខេត្ត)
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+          <img src="images/QRyoutube.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+          <img src="images/QRtelegram.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+          <img src="images/QRfacebook.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+        </div>
+        <!-- Modal -->
+        <div id="imgModal" onclick="closeModal()"
+          style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9999; justify-content:center; align-items:center;">
+          <img id="modalImg" src=""
+            style="max-width:90vw; max-height:90vh; border-radius:8px; box-shadow:0 4px 24px rgba(0,0,0,0.4);">
+        </div>
+      </div>
+
+      <!-- Column 3: Quick Links -->
+      <div class="footer-col">
+        <h3>តំណភ្ជាប់</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://mlvt.gov.kh/index.php/en/">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              ក្រសួងការងារ និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ
+            </a>
+          </li>
+          <li>
+            <a href="https://scholarship.tvet.gov.kh/home/search-school/info/6513e2ee345b6b534213f56c?route=skill">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              ចុះឈ្មោះតាមប្រព័ន្ធ Tvet 1.5m នៃមជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តរតនគិរី</a>
+          </li>
+          <li>
+            <a href="https://scholarship.tvet.gov.kh/home/search-school?route=skill">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              គ្រឹះស្ថានសិក្សាគ្រប់រាជធានី-ខេត្ត និងជំនាញគ្រប់វិស័យ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      ស្នាដៃនិស្សិតព័ត៌មានវិទ្យាជំនាន់ទី២ នៃមជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តរតនគិរី ដឹកនាំដោយលោក យីន រ៉ាឈិ
+    </div>
+  </footer>
+
+  <script src="Javascript/script.js"></script>
+</body>
+
+</html>
