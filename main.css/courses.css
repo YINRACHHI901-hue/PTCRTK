@@ -1,0 +1,43 @@
+   table {
+       border-collapse: collapse;
+       width: 75%;
+       margin: 20px auto;
+
+   }
+
+   th,
+   td {
+       border: 1px solid black;
+       padding: 8px;
+       text-align: left;
+   }
+
+   th {
+       text-align: center;
+   }
+
+   h1 {
+       text-align: center;
+       color: #0b3d6b;
+   }
+
+   th {
+       color: #2e7d32;
+   }
+
+   p {
+       font-size: 1.1rem;
+       line-height: 1.6;
+       color: #333;
+       margin: 20px auto;
+       width: 80%;
+   }
+
+   h3 {
+       color: #e9e8e7;
+       font-size: 1.3rem;
+       margin: 20px 0;
+       text-align: center;
+
+   }
+

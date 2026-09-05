@@ -1,0 +1,424 @@
+:root {
+  --primary: #22409a;
+  --accent: #e8a020;
+  --light: #f5f7fa;
+  --white: #ffffff;
+  --text: #1e2a3a;
+  --text-muted: #6b7a8d;
+  --transition: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── SLIDESHOW ── */
+.slideshow-body {
+  width: 100%;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 58vw, 600px);
+  overflow: hidden;
+  background: var(--primary);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(60px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.slide.exit {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* slide backgrounds */
+.slide:nth-child(1) {
+  background: #22409a;
+}
+
+.slide:nth-child(2) {
+  background: #22409a;
+}
+
+.slide:nth-child(3) {
+  background: #22409a;
+}
+
+.slide:nth-child(4) {
+  background: #22409a;
+}
+
+/* Split layout: text left, image right */
+.slide {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.slide-image {
+  position: relative;
+  flex: 0 0 45%;
+  overflow: hidden;
+  order: 2;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.3s;
+}
+
+.slide.active .slide-image img {
+  opacity: 1;
+}
+
+/* diagonal clip on left edge of image panel */
+.slide-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  clip-path: polygon(0 0, 10% 0, 0 100%);
+  z-index: 1;
+}
+
+.slide:nth-child(1) .slide-image::before {
+  background: #22409a;
+}
+
+.slide:nth-child(2) .slide-image::before {
+  background: #22409a;
+}
+
+.slide:nth-child(3) .slide-image::before {
+  background: #22409a;
+}
+
+.slide:nth-child(4) .slide-image::before {
+  background: #22409a;
+}
+
+/* subtle dark overlay on image */
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
+  max-width: 1920px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+
+@media (max-width: 700px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide-image {
+    flex: 0 0 200px;
+    order: 1;
+  }
+
+  .slide-image::before {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 0);
+  }
+
+  .slide-content {
+    order: 2;
+  }
+}
+
+.slide-tag {
+  display: inline-flex;
+  /* ← change to inline-flex */
+  align-items: center;
+  /* ← vertical center */
+  justify-content: center;
+  /* ← horizontal center */
+  background: var(--accent);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.slide-tag p {
+  font-family: "Khmer OS Battambang", sans-serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+}
+
+.slide-title {
+  font-family: "Khmer OS Muol Light", sans-serif;
+  font-size: 2.5rem;
+  color: var(--white);
+  margin: 0;
+}
+
+.slide-desc {
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  max-width: 480px;
+}
+
+.slide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 3px;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  background: #cf8c15;
+  transform: translateY(-1px);
+}
+
+.slide-btn svg {
+  transition: transform 0.2s;
+}
+
+.slide-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── CONTROLS ── */
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  width: clamp(36px, 5vw, 48px);
+  height: clamp(36px, 5vw, 48px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.slide-prev {
+  left: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.slide-next {
+  right: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.dots {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+/* progress bar */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 10;
+  transition: width 0.1s linear;
+}
+
+/* ── STATS STRIP ── */
+.stats {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  border-bottom: 1px solid #e8ecf1;
+}
+
+.stat {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid #e8ecf1;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  letter-spacing: 0.03em;
+}
+
+/* ── ANNOUNCEMENTS ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-family: "Khmer OS Muol Light", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  color: var(--primary);
+}
+
+.section-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4e9f0;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-stripe {
+  height: 4px;
+}
+
+.card-stripe.blue {
+  background: var(--primary);
+}
+
+.card-stripe.gold {
+  background: var(--accent);
+}
+
+.card-stripe.green {
+  background: #2e8b57;
+}
+
+.card-stripe.red {
+  background: #c0392b;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-family: Khmer OS Battambang;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.card-text {
+  text-align: justify;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------- */

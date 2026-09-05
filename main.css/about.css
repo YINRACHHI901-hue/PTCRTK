@@ -1,0 +1,229 @@
+:root {
+  --navy: #0b2545;
+  --navy2: #13395e;
+  --gold: #cbbe02;
+  --gold-lt: #f2dfa0;
+  --cream: #faf7f2;
+  --white: #ffffff;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --border: #e5e0d8;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+}
+
+/* ── SECTIONS ── */
+section {
+  padding: 20px 50px;
+}
+.about-text h1{
+    font-family: "Khmer OS Muol Light", sans-serif;
+    line-height: 1rem;
+    
+}
+.about-text h2{
+    font-family: "Khmer OS Muol Light", sans-serif;
+    color: var(--gold);
+}
+.about-text p {
+  color: #000000;
+  margin-bottom: 1.2rem;
+  font-size: 0.98rem;
+}
+.section-header h3{
+  line-height: 1rem;
+}
+.section-header h2{
+   font-family: "Khmer OS Muol Light", sans-serif;
+  line-height: 1rem;
+  font-size: 2rem;
+}
+.section-header p{
+ color: #000000;
+}
+
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 580px;
+  font-weight: 300;
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-header.center {
+  text-align: center;
+}
+
+.section-header.center .section-sub {
+  margin: 0 auto;
+}
+
+/* ── ABOUT ── */
+#about {
+  background: rgb(255, 255, 255);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-img-wrap {
+  position: relative;
+}
+
+.about-img-wrap img,
+.school-img-placeholder {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  margin-top: 10px;
+}
+
+.img-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 12px;
+  padding: 16px 22px;
+  font-family: var(--serif);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ── TEACHERS ── */
+#teachers {
+  background: #22409a;
+  
+}
+
+#teachers .section-title {
+  color: var(--white);
+}
+
+#teachers .section-label {
+  color: var(--gold);
+}
+
+#teachers .section-sub {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.teacher-card {
+  text-align: center;
+}
+
+.teacher-photo-wrap {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 0 auto 22px;
+  border: 4px solid var(--gold);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.teacher-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* keeps faces visible */
+  display: block;
+}
+
+.teacher-name {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.teacher-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.teacher-bio {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+  max-width: 280px;
+  margin: 0 auto 18px;
+}
+
+.teacher-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.74rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ── NUMBERS ── */
+#numbers {
+  background: var(--gold);
+  padding: 64px 6vw;
+  text-align: center;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.num-item {
+  padding: 20px 0;
+}
+
+.num-item + .num-item {
+  border-left: 1px solid rgba(11, 37, 69, 0.15);
+}
+
+.num-big {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+}
+
+.num-txt {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(11, 37, 69, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 6px;
+}

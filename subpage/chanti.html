@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Example</title>
+  <link rel="stylesheet" href="/main.css/style.css" />
+  <link rel="stylesheet" href="subpagestyle.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="/images/school-logo.png" alt="">
+      <div class="school-title">
+        <h3>មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលវិជ្ជាជីវៈ ខេត្តរតនគិរី</h3>
+        <h4>Ratanakiri Provincial Training Center</h4>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span>
+    </button>
+    <nav id="nav">
+      <a href="/index.html">ទំព័រដើម</a>
+      <a href="/courses.html">វគ្គសិក្សា</a>
+      <a href="/about.html">អំពី</a>
+      <a href="/structure.html">រចនាសម្ព័ន្ធ</a>
+      <a href="/activity.html" class="active">សកម្មភាព</a>
+      <a href="/contact.html">ទំនាក់ទំនង</a>
+    </nav>
+  </header>
+  <!-- Marquee Ticker -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="track">
+      <span class="marquee-item"><span class="dot"></span><strong>New:</strong>មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលវិជ្ជាជីវៈ
+        ខេត្តរតនគិរី</span>
+      <span class="marquee-divider">·</span>
+      <span class="marquee-item"><span class="dot"></span><strong>Free tier</strong> now includes
+        unlimited API requests this month</span>
+      <span class="marquee-divider">·</span>
+      <span class="marquee-item"><span class="dot"></span>Join <strong>12,000+</strong> teams already
+        shipping faster with ACME</span>
+      <span class="marquee-divider">·</span>
+      <span class="marquee-item"><span class="dot"></span><strong>Webinar:</strong> Scaling
+        microservices — Thursday, March 20 at 2 PM UTC</span>
+      <span class="marquee-divider">·</span>
+      <span class="marquee-item"><span class="dot"></span>Read the
+        <strong>2026 State of DevOps Report</strong> — now available</span>
+      <span class="marquee-divider">·</span>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------------------- -->
+
+  <div class="electrical">
+    <h1>
+      រូបថតសកម្មភាពសិស្សសិក្ខាកាមជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី 
+    </h1>
+
+    <!-- Gallery -->
+    <div class="gallery" id="gallery">
+      <!-- Placeholder cards -->
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch1.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch2.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch3.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch4.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch5.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch6.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch7.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch8.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch9.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch10.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch11.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch12.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch13.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch14.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch15.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch16.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch17.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch18.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch19.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+      <div class="gallery__item" onclick="openLightbox(this)">
+        <div class="gallery__image-wrap">
+          <img src="/images/chanti/ch20.jpg" alt="" />
+          <div class="gallery__overlay">
+            <span class="gallery__overlay-icon">⤢</span>
+          </div>
+        </div>
+        <div class="gallery__caption">
+          <div class="gallery__caption-title">សកម្មភាពរៀនជំនាញការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី </div>
+          <div class="gallery__caption-date">ឆ្នាំ ២០២៥</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-grid">
+      <!-- Column 1: Contact -->
+      <div class="footer-col">
+        <h3>ទំនាក់ទំនង</h3>
+
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+          </svg>
+          <p>097 470 6184<br />012 614 145<br /></p>
+        </div>
+
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+          <p>info@mlvt.gov.kh</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Address -->
+      <div class="footer-col">
+        <h3>អាសយដ្ឋាន</h3>
+        <div class="address-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <p>
+            ភូមិទេសអន្លុង សង្កាត់បឹងកន្សែង ក្រុងបានលុង ខេត្តរតនគិរី(ក្រោយមន្ទីអប់រំខេត្ត)
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+          <img src="/images/QRyoutube.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+          <img src="/images/QRtelegram.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+          <img src="/images/QRfacebook.jpg" alt="" style="width: 60px; cursor: pointer;" onclick="openModal(this)">
+        </div>
+        <!-- Modal -->
+        <div id="imgModal" onclick="closeModal()"
+          style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9999; justify-content:center; align-items:center;">
+          <img id="modalImg" src=""
+            style="max-width:90vw; max-height:90vh; border-radius:8px; box-shadow:0 4px 24px rgba(0,0,0,0.4);">
+        </div>
+      </div>
+
+      <!-- Column 3: Quick Links -->
+      <div class="footer-col">
+        <h3>តំណភ្ជាប់</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://mlvt.gov.kh/index.php/en/">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              ក្រសួងការងារ និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ
+            </a>
+          </li>
+          <li>
+            <a href="https://scholarship.tvet.gov.kh/home/search-school/info/6513e2ee345b6b534213f56c?route=skill">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              ចុះឈ្មោះតាមប្រព័ន្ធ Tvet 1.5m នៃមជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តរតនគិរី</a>
+          </li>
+          <li>
+            <a href="https://scholarship.tvet.gov.kh/home/search-school?route=skill">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M3.9 12c0-1.7 1.4-3.1 3.1-3.1h4V7H7C4.2 7 2 9.2 2 12s2.2 5 5 5h4v-1.9H7c-1.7 0-3.1-1.4-3.1-3.1zM8 
+                  13h8v-2H8v2zm9-6h-4v1.9h4c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1h-4V17h4c2.8 0 5-2.2 5-5s-2.2-5-5-5z" />
+              </svg>
+              គ្រឹះស្ថានសិក្សាគ្រប់រាជធានី-ខេត្ត និងជំនាញគ្រប់វិស័យ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      ស្នាដៃនិស្សិតការដាំ ថែទាំ និងប្រមូលផលដំណាំស្វាយចន្ទី ជំនាន់ទី២ នៃមជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តរតនគិរី ដឹកនាំដោយលោក យីន រ៉ាឈិ
+    </div>
+  </footer>
+
+  <script src="/Javascript/script.js"></script>
+  <script>
+    // Open lightbox
+    function openLightbox(card) {
+      const img = card.querySelector("img");
+      if (!img) return;
+      document.getElementById("lightboxImg").src = img.src;
+      document.getElementById("lightboxImg").alt = img.alt;
+      document.getElementById("lightbox").classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+
+</html>

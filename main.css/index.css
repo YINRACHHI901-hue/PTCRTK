@@ -1,0 +1,476 @@
+/* ---------------youtube--video--------------- */
+
+.yt-video {
+  font-family: sans-serif;
+  padding: 20px 40px;
+  background: #ffffff;
+  color: #f1f1f1;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.yt-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  padding: 1rem 0;
+}
+.yt-main-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.yt-main-wrap .thumb-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.yt-main-wrap .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  background: #ff0000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  pointer-events: none;
+}
+.yt-main-wrap:hover .play-btn {
+  background: #cc0000;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.play-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+.yt-main-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: none;
+}
+.yt-main-wrap.playing .thumb-bg,
+.yt-main-wrap.playing .play-btn {
+  display: none;
+}
+.yt-main-wrap.playing iframe {
+  display: block;
+}
+.yt-main-wrap.playing {
+  cursor: default;
+}
+.watch-link {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+  display: none;
+  z-index: 10;
+}
+.yt-main-wrap.playing .watch-link {
+  display: block;
+}
+.yt-main-meta {
+  margin-top: 10px;
+}
+.yt-main-meta h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: #000000;
+}
+.yt-main-meta p {
+  font-size: 13px;
+  color: #aaa;
+  margin: 0;
+}
+.yt-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 520px;
+}
+.yt-sidebar-label {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #575757;
+  margin-bottom: 4px;
+}
+.yt-item {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px;
+  border: 0.5px solid transparent;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.yt-item:hover {
+  background: #c9c9c9;
+}
+.yt-item.active {
+  background: #c9c9c9;
+}
+.yt-thumb {
+  position: relative;
+  width: 120px;
+  min-width: 120px;
+  height: 67.5px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.yt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.yt-item-meta {
+  flex: 1;
+  min-width: 0;
+}
+.yt-item-meta h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.yt-item-meta p {
+  font-size: 12px;
+  color: #575757;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .yt-layout {
+    grid-template-columns: 1fr;
+  }
+  .yt-sidebar {
+    max-height: 300px;
+  }
+}
+/* =====================================timestudy============================================ */
+.timestudy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+.cardtime {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(26, 58, 92, 0.08);
+  padding: 48px 52px;
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  gap: 52px;
+  align-items: flex-start;
+  border: 1px solid #d6e4f0;
+}
+
+/* Left icon column */
+.icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.clock-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 3s ease-in-out infinite;
+}
+.clock-icon img {
+  width: 100px;
+}
+
+.label {
+  font-family: Khmer OS Battambang;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 3;
+}
+
+/* Schedule grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 48px;
+  flex: 1;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d6e4f0;
+  animation: fadeUp 0.5s ease both;
+}
+
+.schedule-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.schedule-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.schedule-item:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.schedule-item:nth-child(4) {
+  animation-delay: 0.35s;
+}
+.schedule-item:nth-child(5) {
+  animation-delay: 0.45s;
+}
+
+/* Remove border from last items in each column */
+.schedule-item:last-child,
+.schedule-item:nth-last-child(2):nth-child(odd) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #2d6a9f;
+  line-height: 1.55;
+  cursor: default;
+  transition: color 0.2s;
+}
+
+.schedule-item:hover .schedule-title {
+  color: #f0a500;
+}
+
+.schedule-time {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #5a7fa0;
+  line-height: 1.6;
+}
+
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #f0a500;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Divider between icon and grid */
+.divider {
+  width: 1px;
+  background: #d6e4f0;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+  .icon-col {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .divider {
+    display: none;
+  }
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .schedule-item:last-child {
+    border-bottom: none;
+  }
+  .schedule-item {
+    padding-bottom: 20px;
+  }
+}
+/* ===================================Scholarships==================================================== */
+.Scholarships {
+  background: #ffffff;
+  color: #1a2f5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+.section-scholarship {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ── Title ── */
+.scholarship-title {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  color: #1a2f5e;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.scholarship-underline {
+  width: 80px;
+  height: 4px;
+  background: #f5a623;
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+/* ── Main layout ── */
+.scholarship-row {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* ── Photo ── */
+.photo-scholarship {
+  flex: 0 0 340px;
+}
+
+.photo-scholarship img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  background: #d0d8e8;
+}
+
+/* Placeholder when no real image */
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #d0d8e8, #b8c5de);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a8db5;
+  font-size: 0.85rem;
+}
+
+/* ── bugers grid ── */
+.buger-scholarship {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 36px;
+}
+
+.buger {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.icon-scholarship {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f5a623;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.icon-scholarship svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.buger-text h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2f5e;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.buger-text p {
+  font-size: 0.78rem;
+  color: #5a6a8a;
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .scholarship-row {
+    flex-direction: column;
+  }
+  .photo-scholarship {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .buger-scholarship {
+    grid-template-columns: 1fr;
+  }
+}
