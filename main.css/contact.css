@@ -176,6 +176,7 @@
 @media (max-width: 800px) {
   .contact-wrapper {
     flex-direction: column;
+    height: auto;          /* don't let a fixed/100vh height squeeze children */
   }
 
   .info-panel {
@@ -184,7 +185,18 @@
   }
 
   .map-panel {
+    flex: none;             /* stop it fighting for leftover flex space */
+    width: 100%;
     min-height: 320px;
+    height: 320px;          /* explicit height, not just min-height */
+  }
+
+  .map-panel iframe,
+  .map-panel embed,
+  .map-panel > div {
+    width: 100%;
+    height: 100%;           /* now it has something real to be 100% of */
+    display: block;
   }
 }
 
@@ -192,6 +204,11 @@
   .info-panel {
     grid-template-columns: 1fr;
   }
+
+  .info-block {
+    border-right: none !important;
+  }
+}
 
   .info-block {
     border-right: none !important;
