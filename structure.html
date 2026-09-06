@@ -8,40 +8,64 @@
   <link rel="stylesheet" href="main.css/style.css" />
   <style>
     .structure-image {
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 0px;
-      margin-top: -20px;
-    }
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  margin-top: -20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-    .structure-image h1 {
-      font-family: "Khmer OS Muol Light", sans-serif;
-      animation: fadeUp 0.5s ease both;
-    }
+.structure-image h1 {
+  font-family: "Khmer OS Muol Light", sans-serif;
+  animation: fadeUp 0.5s ease both;
+  text-align: center;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+}
 
-    .structure-image img {
-      width: 1000px;
-      height: auto;
-      /* preserve aspect ratio */
-      display: block;
-      object-fit: contain;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-      border-radius: 8px;
-      animation: fadeUp 0.7s ease both;
-    }
+.structure-image img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  /* preserve aspect ratio */
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  animation: fadeUp 0.7s ease both;
+}
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional fine-tuning for smaller screens */
+@media (max-width: 768px) {
+  .structure-image {
+    padding: 12px 12px;
+  }
+
+  .structure-image img {
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .structure-image {
+    padding: 8px 8px;
+    margin-top: -10px;
+  }
+}
   </style>
 </head>
 
