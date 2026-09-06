@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Navbar Example</title>
   <link rel="stylesheet" href="main.css/style.css" />
+  <link rel="stylesheet" href="main.css/slideshow.css" />
   <style>
     .structure-image {
   display: grid;
@@ -214,6 +215,14 @@
   </footer>
 
   <script src="Javascript/script.js"></script>
+    <script>
+    // Mobile nav
+      document.getElementById("hamburger").onclick = () => {
+        document.getElementById("nav").classList.toggle("open");
+      };
+
+      resetProgress();
+  </script>
 </body>
 
 </html>
