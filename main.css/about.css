@@ -227,3 +227,133 @@ section {
   letter-spacing: 0.07em;
   margin-top: 6px;
 }
+/* ── RESPONSIVE ── */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  section {
+    padding: 20px 32px;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .teachers-grid {
+    gap: 24px;
+  }
+
+  .numbers-grid {
+    gap: 0;
+  }
+
+  .num-big {
+    font-size: 2.4rem;
+  }
+}
+
+/* Small tablet / large mobile (≤820px) */
+@media (max-width: 820px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-img-wrap {
+    order: -1; /* image above text on mobile, remove if you want text first */
+  }
+
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+
+  .num-item:nth-child(2n) {
+    border-left: none;
+  }
+
+  .num-item:nth-child(3),
+  .num-item:nth-child(4) {
+    border-top: 1px solid rgba(11, 37, 69, 0.15);
+    padding-top: 24px;
+  }
+}
+
+/* Mobile (≤600px) */
+@media (max-width: 600px) {
+  section {
+    padding: 16px 20px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .section-sub {
+    font-size: 0.95rem;
+  }
+
+  .img-badge {
+    bottom: -14px;
+    right: -14px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .teachers-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .teacher-photo-wrap {
+    width: 140px;
+    height: 140px;
+  }
+
+  .teacher-bio {
+    max-width: 100%;
+  }
+
+  #numbers {
+    padding: 48px 6vw;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .num-big {
+    font-size: 2rem;
+  }
+
+  .num-txt {
+    font-size: 0.75rem;
+  }
+}
+
+/* Very small mobile (≤380px) */
+@media (max-width: 380px) {
+  .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .num-item + .num-item {
+    border-left: none;
+    border-top: 1px solid rgba(11, 37, 69, 0.15);
+  }
+
+  .teacher-photo-wrap {
+    width: 120px;
+    height: 120px;
+  }
+}
