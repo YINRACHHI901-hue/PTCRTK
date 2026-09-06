@@ -7,6 +7,7 @@
   <title>Navbar Example</title>
   <link rel="stylesheet" href="/main.css/style.css" />
   <link rel="stylesheet" href="subpagestyle.css">
+  <link rel="stylesheet" href="/main.css/slideshow.css" />
 </head>
 
 <body>
@@ -425,6 +426,14 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeLightbox();
     });
+  </script>
+  <script>
+    // Mobile nav
+      document.getElementById("hamburger").onclick = () => {
+        document.getElementById("nav").classList.toggle("open");
+      };
+
+      resetProgress();
   </script>
 </body>
 
