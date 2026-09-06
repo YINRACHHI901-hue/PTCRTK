@@ -438,5 +438,9 @@
   color: var(--text-muted);
   line-height: 1.6;
 }
-
+@media (max-width: 640px) {
+  .section{
+    padding: 0 20px;
+  }
+}
 /* ----------------------------------------------------- */
