@@ -129,9 +129,11 @@
   order: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
   .slide {
     flex-direction: column;
+    gap: 8px;
+    
   }
 
   .slide-image {
@@ -146,28 +148,44 @@
   .slide-content {
     order: 2;
   }
+  .slide-content a{
+    height: 9px;
+  }
+  .slideshow {
+    width: 100%;
+    height: 580px;
+   margin-top: 0;
+  }
+   .slide-tag p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-size: rem;
+    margin-bottom: 0;
+  }
+  .slide-content h2 {
+    font-size: 1rem;
+  }
 }
 
 .slide-tag {
   display: inline-flex;
-  /* ← change to inline-flex */
   align-items: center;
-  /* ← vertical center */
   justify-content: center;
-  /* ← horizontal center */
   background: var(--accent);
   text-transform: uppercase;
-  padding: 4px 12px;
+  padding: clamp(3px, 0.8vw, 4px) clamp(8px, 2vw, 12px);
   border-radius: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  max-width: 100%;
 }
 
 .slide-tag p {
   font-family: "Khmer OS Battambang", sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(0.75rem, 2.5vw, 1.2rem);
   color: var(--white);
   text-align: center;
   margin: 0;
+  white-space: nowrap;
 }
 
 .slide-title {
