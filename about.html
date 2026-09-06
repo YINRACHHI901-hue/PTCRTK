@@ -7,6 +7,7 @@
   <title>Navbar Example</title>
   <link rel="stylesheet" href="main.css/style.css" />
   <link rel="stylesheet" href="main.css/about.css">
+  <link rel="stylesheet" href="main.css/slideshow.css" />
 </head>
 
 <body>
@@ -248,6 +249,14 @@
   </footer>
 
   <script src="Javascript/script.js"></script>
+  <script>
+    // Mobile nav
+      document.getElementById("hamburger").onclick = () => {
+        document.getElementById("nav").classList.toggle("open");
+      };
+
+      resetProgress();
+  </script>
 </body>
 
 </html>
